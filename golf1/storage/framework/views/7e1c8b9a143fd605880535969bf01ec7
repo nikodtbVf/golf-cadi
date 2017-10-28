@@ -1,0 +1,29 @@
+<?php $__env->startSection('content'); ?>
+	<?php if(count($errors) > 0): ?>
+		<?php echo $__env->make('alerts.request', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	<?php endif; ?>
+	
+		<?php echo Form::model($module,['route' => ['modulo.update',$module->id],'method' => 'PUT']); ?>
+
+			<?php echo $__env->make('modulo.forms.module', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+			<div class="col-sm-12">
+				<div class="col-sm-1">
+					<?php echo Form::submit('Actualizar',['class'=>'btn btn-primary']); ?>
+
+				</div>		
+			</div>
+		<?php echo Form::close(); ?>
+
+		<div class="col-sm-12">
+			<div class="col-sm-1">
+				<?php echo Form::open(['route' => ['modulo.destroy',$module->id],'method' => 'DELETE']); ?>	
+					<?php echo Form::submit('Eliminar',['class'=>'btn btn-danger']); ?>
+
+				<?php echo Form::close(); ?>
+
+			</div>
+			
+		</div>	
+	
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.principal', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+		<meta charset="utf-8">
+	<link href="{{asset("css/bootstrap.css")}}" rel="stylesheet">
+	<link href="{{asset("css/modulos.css")}}" rel="stylesheet">	
+
+</head>
+<body>
+
+	
+	@yield('content')
+
+	{!!Html::script('js/jquery.min.js')!!}
+	{!!Html::script('js/tether.min.js')!!}
+	{!!Html::script('js/bootstrap.min.js')!!}
+</body>
+</html>
+
+

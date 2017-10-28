@@ -1,0 +1,17 @@
+	<div class="col-sm-12">
+		<div class="form-group col-sm-6">
+			<?php echo Form::label('Numero:'); ?>
+
+			<?php echo Form::number('numero',null,['class' =>'form-control','placeholder'=>'Ingresa el numero del modulo']); ?>
+
+		</div>
+	</div>
+	<div class="col-sm-12">
+		<div class="form-group col-sm-6">
+			<?php echo Form::label('Nombre:'); ?>
+
+			<?php echo Form::text('nombre',null,['class' =>'form-control','placeholder'=>'Ingresa el nombre del usuario']); ?>
+
+		</div>
+	</div>
+		
