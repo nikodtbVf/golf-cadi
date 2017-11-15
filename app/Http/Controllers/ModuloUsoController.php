@@ -45,7 +45,15 @@ class ModuloUsoController extends Controller
                 $module->init_time = $mu->init_time;
                 $module->end_time = Carbon::parse($mu->end_time);
                 $module->remaining_time = $module->end_time->diff(Carbon::now());
-                $module->string_fecha = $module->remaining_time->format(" %i minutos, %s segundos");
+                $now = Carbon::now();
+                $diff =$now > $module->end_time;
+                if($diff){
+                    $module->string_fecha = "Tiempo Agotado";
+                }else{
+                   $module->string_fecha = $module->remaining_time->format(" %i minutos, %s segundos");
+                }
+
+                
                 $module->cadi = $mu->user_id;
                 $module->nombre_cadi = User::find($mu->user_id)->name;
                 $module->nombre_cliente = $mu->nombre_cliente;
