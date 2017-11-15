@@ -1,0 +1,90 @@
+.divborder {
+  border: 0px solid #cecece;
+  width: 190px;
+  height: 270px;
+  border-radius: 15px;
+}
+.elementsdiv {
+  padding-top: 30px;
+  padding-left: 20%;
+}
+.ocupado {
+		padding-top: 10px;
+	padding-bottom: 10px;
+		font-size: large;
+ color: red;
+}
+
+.disponible {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: large;
+  color: green;
+}
+.titulo-modulo{
+	 padding-top: 10px;
+  color: #000099;
+}
+
+.separar {
+  padding-right: 0px;
+}
+
+.botones{
+  padding-bottom: 5px;
+}
+
+.centrado{
+	padding-top: 100px;
+}
+
+.color-hora{
+  color: #3e545f;
+}
+
+body{
+	font-family: verdana;
+	font-size: 14px;
+}
+
+.col-time{
+  #position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-min{
+  color: #3e545f;
+  min-height: 20px;
+  padding-right: 125px;
+  padding-left: 125px;
+}
+
+	.Absolute-Center{
+		margin: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: #FFFFF9;
+	}
+	.container{
+	padding-top: 100px;
+	padding-left: 30%;
+	position: fixed;
+
+	}
+		.containermod{
+		#margin: auto;
+		#position: absolute;
+		#top: 0;
+		#left: 0;
+		#bottom: 0;
+		#right: 0;
+
+	}
+	.button{
+		width: 150%;
+	}

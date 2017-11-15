@@ -1,0 +1,51 @@
+<?php $__env->startSection('content'); ?>
+
+	<?php if(Session::has('message')): ?>
+		<?php echo $__env->make('alerts.alert', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	<?php endif; ?>
+	<?php echo Form::open(['route'=>'login.store','method'=>'POST']); ?>
+
+		<!--<center class="centrado">-->
+	<div class = 'container'>
+		<div class='row'>
+			<div class ="col-sm-12" >
+				<strong>
+					<h1><?php echo Form::label('Correo Electrónico'); ?></h1>
+				</strong>	
+			</div>
+		</div>
+		<div class='row'>
+			<div class="col-sm-12">
+				<?php echo Form::email('email',null,['class' =>'form-control','placeholder'=>'Ingresa tu correo electronico']); ?>
+
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-sm-12'>
+				<strong>
+					<h1><?php echo Form::label('contrasena','Contraseña'); ?></h1>
+				</strong>	
+			</div>
+		</div>
+		<div class='row'>
+			<div class="col-sm-12">
+				<?php echo Form::password('password',['class' =>'form-control','placeholder'=>'Ingresa tu contraseña']); ?>
+
+			</div>
+		</div>
+		<br>
+		<div class='row'>
+			<div class="col-sm-12 form-group">
+				<?php echo Form::submit('Iniciar Sesión',['class'=>'btn btn-primary']); ?>
+
+			</div>
+		</div>
+		
+	</div>
+		
+	
+	<?php echo Form::close(); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.login', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

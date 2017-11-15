@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+		<meta charset="utf-8">
+	<link href="<?php echo e(asset("css/bootstrap.css")); ?>" rel="stylesheet">
+	<link href="<?php echo e(asset("css/modulos.css")); ?>" rel="stylesheet">	
+
+</head>
+<body>
+
+	
+	<?php echo $__env->yieldContent('content'); ?>
+
+	<script src="<?php echo e(asset('js/jquery.min.js')); ?>"></script>
+	<?php echo Html::script('js/tether.min.js'); ?>
+
+	<script src="<?php echo e(asset('js/bootstrap.js')); ?>"></script>
+</body>
+</html>
+
+

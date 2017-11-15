@@ -1,0 +1,18 @@
+<?php $__env->startSection('content'); ?>
+	<?php if(count($errors) > 0): ?>
+		<?php echo $__env->make('alerts.request', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	<?php endif; ?>
+	
+	<?php echo Form::open(['route'=>'usuario.store','method'=>'POST']); ?>
+
+		 <?php echo $__env->make('usuario.forms.user', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		 <div class="col-sm-12">
+		 	<div class="col-sm-6">
+		 		<?php echo Form::submit('Registrar',['class'=>'btn btn-primary']); ?>
+
+		 	</div>
+		</div>		
+	<?php echo Form::close(); ?>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.principal', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
